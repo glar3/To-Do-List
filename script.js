@@ -84,7 +84,7 @@ function newElement() {
   var deleteText = document.createTextNode("Delete Task");
   checkbox.type = "checkbox";
   checkbox.className = "checked";
-  span.id = "listItemName"; // using ID as per your HTML
+  span.id = "listItemName";
   span.appendChild(text);
   deleteItem.className = "delete";
   deleteItem.appendChild(deleteText);
@@ -96,8 +96,17 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.querySelector(".items").appendChild(li);
-    // Set up event listeners for the new elements
     setupEventListeners();
   }
   document.getElementById("taskName").value = "";
 }
+
+const taskClick = document.getElementById("addListItem");
+
+taskClick.addEventListener("click", function () {
+  const reset = function () {
+    taskClick.style.background = "#266150";
+  };
+
+  setTimeout(reset, 300);
+});
