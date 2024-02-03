@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="header">To Do List</h2>
+      <ul class="items">
+        <li>
+          <span id="listItemName">To be continued</span>
+        </li>
+
+        <li>
+          <span id="listItemName">This is a list item</span>
+        </li>
+      </ul>
+      <div class="addContainer">
+        <input
+          id="taskName"
+          type="text"
+          placeholder="Enter Task Name Here..."
+        />
+        <button class="add" id="addListItem" onclick="newElement()">
+          Add a Task
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
